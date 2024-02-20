@@ -1,0 +1,4 @@
+https://www.hackerrank.com/challenges/weather-observation-station-7/problem
+
+-- use like operation '%-' , vovels end with a or e or i or o or u
+select DISTINCT CITY from STATION WHERE CITY like '%a' or CITY LIKE '%e' or city like '%i' OR CITY LIKE '%o' OR CITY LIKE '%u'
