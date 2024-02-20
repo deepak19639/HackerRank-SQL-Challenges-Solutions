@@ -1,0 +1,5 @@
+https://www.hackerrank.com/challenges/weather-observation-station-6/problem   -- problem link
+
+
+--CITY names starting with vowels use like operatior 'a%'
+select distinct City from Station where city like 'a%' or city like 'e%' or city like 'i%' or city like 'o%' or city like 'u%'
