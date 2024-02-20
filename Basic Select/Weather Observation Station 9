@@ -1,0 +1,4 @@
+https://www.hackerrank.com/challenges/weather-observation-station-9/problem  -- problem link
+
+-- first chracter  not in vovel
+SELECT DISTINCT CITY FROM STATION WHERE upper(SUBSTR(CITY,1,1)) NOT IN ('A','E','I','O','U') AND LOWER(SUBSTR(CITY,1,1)) NOT IN ('a','e','i','o','u');
