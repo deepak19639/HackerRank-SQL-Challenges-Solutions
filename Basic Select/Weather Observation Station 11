@@ -1,0 +1,6 @@
+https://www.hackerrank.com/challenges/weather-observation-station-11/problem
+
+-- do not start with vovels and do not end with vovels
+SELECT DISTINCT CITY FROM STATION WHERE 
+LEFT(CITY,1) NOT IN ('a','e','i','o','u') or 
+RIGHT(CITY,1) NOT IN ('a','e','i','o','u')
