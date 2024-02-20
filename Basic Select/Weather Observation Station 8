@@ -1,0 +1,7 @@
+https://www.hackerrank.com/challenges/weather-observation-station-8/problem  -- problem link
+
+-- first and last chrater vovel   LEFT(CITY,1) - gives leftmost chracter , RIGHT(CITY,1) - gives righmost chracter
+SELECT DISTINCT CITY 
+FROM STATION 
+WHERE LEFT(CITY,1) IN ('a','e','i','o','u')
+    AND RIGHT(CITY,1) IN ('a','e','i','o','u')
