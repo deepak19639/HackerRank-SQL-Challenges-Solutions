@@ -1,0 +1,6 @@
+https://www.hackerrank.com/challenges/weather-observation-station-12/problem  -- problem link
+
+-- not start and not end with vovels
+select distinct city from station where 
+left(city,1) NOT IN('a','e','i','o','u')  and 
+Right(city,1) NOT IN ('a','e','i','o','u')
