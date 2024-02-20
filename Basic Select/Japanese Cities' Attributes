@@ -1,0 +1,3 @@
+https://www.hackerrank.com/challenges/japanese-cities-attributes/problem - problem link
+
+SELECT * FROM CITY WHERE COUNTRYCODE = 'JPN'
