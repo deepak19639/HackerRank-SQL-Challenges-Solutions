@@ -1,0 +1,6 @@
+https://www.hackerrank.com/challenges/more-than-75-marks/problem  -- problem link
+
+-- order by last 3 chracter use RIGHT(NAME,3) FUNCTION
+select name from STUDENTS 
+WHERE marks > 75 
+order by RIGHT(Name,3),id
