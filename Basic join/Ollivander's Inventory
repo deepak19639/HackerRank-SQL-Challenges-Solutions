@@ -1,0 +1,23 @@
+https://www.hackerrank.com/challenges/harry-potter-and-wands/problem  -- problem link
+
+-- is_evile = no , high powr , high age  -- minimu coins_needed
+-- id , age, coins_needed, power of wands 
+-- order by power descr , age desc 
+
+select  
+     w.id ,
+     p.age , w.coins_needed , 
+     w.power 
+    from wands w
+INNER JOIN 
+    Wands_property p on w.code = p.code                  -- here age 40      powr 7 
+where p.is_evil = '0'  AND w.coins_needed =               --          40           7
+(                                                         --          40           7and 
+    select  MIN(ws.coins_needed) from wands ws            --   we want mincoins_needed.  
+    inner join wands_property wp on ws.code = wp.code
+    where ws.power = w.power and wp.age = p.age
+)
+order by
+    w.power desc , p.age desc 
+
+-- minimum coins_needed  high(age and power )
