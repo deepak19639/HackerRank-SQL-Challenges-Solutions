@@ -1,0 +1,7 @@
+https://www.hackerrank.com/challenges/earnings-of-employees/problem  -- prolbem link
+
+
+select  concat(max(salary*months),' ',count(*)) from employee
+group by (salary*months)
+order by max(salary*months) desc
+limit 1
