@@ -1,0 +1,10 @@
+https://www.hackerrank.com/challenges/the-pads/problem  -- problem link
+
+-- use LEFT(Occupation,1)  - Gives leftmost chracter of Occupation
+select CONCAT(Name ,'(' ,LEFT(Occupation,1),')' )from OCCUPATIONS 
+order by name;
+
+SELECT CONCAT('There are a total of ',COUNT(OCCUPATION),' ',LOWER(OCCUPATION),'s.')
+FROM OCCUPATIONS
+GROUP BY OCCUPATION
+order by COUNT(OCCUPATION),OCCUPATION
