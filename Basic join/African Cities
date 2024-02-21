@@ -1,0 +1,7 @@
+https://www.hackerrank.com/challenges/african-cities/problem  -- prolem link
+
+select city.name from 
+
+city inner join country on city.countrycode = Country.code
+where
+continent = 'Africa'
