@@ -1,0 +1,4 @@
+https://www.hackerrank.com/challenges/average-population/problem  -- problem  link
+
+
+SELECT FLOOR(AVG(POPULATION)) FROM CITY 
