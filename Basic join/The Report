@@ -1,0 +1,20 @@
+https://www.hackerrank.com/challenges/the-report/problem  -- prolbem link
+
+ select  
+ case 
+    when grade >=8 then s.name else null end
+    ,g.grade,s.marks
+from
+Students s  join Grades G on 
+ s.marks Between g.Min_Mark and g.Max_Mark
+ order by g.grade desc, s.name asc, s.marks asc
+
+
+-- select name , grade, mark from 
+-- when grade < 8 null,grade 
+-- name , grade , mark
+-- grade >= 8
+-- order by grade desc , name asc
+-- marks asc
+
+
