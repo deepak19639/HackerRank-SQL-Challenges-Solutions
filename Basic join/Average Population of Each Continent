@@ -1,0 +1,6 @@
+https://www.hackerrank.com/challenges/average-population-of-each-continent/problem  -- problem link
+
+SELECT COUNTRY.Continent , floor(AVG(CITY.Population)) FROM CITY
+INNER JOIN  COUNTRY on
+COUNTRY.CODE = CITY.COUNTRYCODE 
+group by country.continent
