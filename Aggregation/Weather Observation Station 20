@@ -1,0 +1,5 @@
+https://www.hackerrank.com/challenges/weather-observation-station-20/problem  -- problem link
+
+SELECT ROUND(LAT_N,4) FROM 
+( select ROW_NUMBER() OVER( ORDER BY LAT_N DESC) as rnk , LAT_N  FROM STATION)  A
+WHERE rnk = (SELECT ROUND(COUNT(*)/2) FROM station)
