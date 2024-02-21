@@ -1,0 +1,16 @@
+https://www.hackerrank.com/challenges/full-score/problem  -- problem link
+
+-- hacker_id , name 
+-- full score more than one challenge 
+-- order by  total no of challenge  full score desc ,
+-- hacker_id asc
+
+select h.hacker_id , h.name  
+from 
+hackers h  inner join Submissions s  on h.hacker_id = s.hacker_id
+inner join Challenges ch on ch.challenge_id = s.challenge_id
+inner join Difficulty df on ch.difficulty_level  = df.difficulty_level 
+where s.score = df.score 
+group by h.hacker_id, h.name 
+having COUNT(*) > 1
+ORDER BY Count(*) desc, h.hacker_id asc
