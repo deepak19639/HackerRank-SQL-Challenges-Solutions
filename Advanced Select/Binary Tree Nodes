@@ -1,0 +1,16 @@
+https://www.hackerrank.com/challenges/binary-search-tree-1/problem  -- problem link
+
+-- use case 
+select  N, 
+CASE
+    WHEN P IS NOT NULL THEN
+    CASE
+        WHEN N NOT IN (SELECT  P FROM BST where p is NOT NULL)  THEN 'Leaf'
+        ELSE
+        'Inner'
+    END
+    ELSE
+    'Root'
+END
+FROM BST
+ORDER BY N
