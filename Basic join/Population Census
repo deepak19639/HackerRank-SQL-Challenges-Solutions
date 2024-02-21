@@ -1,0 +1,4 @@
+https://www.hackerrank.com/challenges/asian-population/problem  -- problem link
+
+select SUM(CITY.POPULATION) from city INNER JOIN COUNTRY ON 
+CITY.CountryCode = COUNTRY.Code WHERE CONTINENT = 'ASIA'
