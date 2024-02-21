@@ -1,0 +1,14 @@
+https://www.hackerrank.com/challenges/contest-leaderboard/problem  -- problem link
+
+SELECT h.hacker_id , h.name , sum(mx.mscore) 
+from hackers h
+inner join (
+select hacker_id , challenge_id , max(score) as mscore
+from
+submissions 
+group by  challenge_id , hacker_id 
+)  mx on  h.hacker_id = mx.hacker_id
+group by h.hacker_id, h.name
+having sum(mx.mscore) >0
+order by sum(mx.mscore)  desc , h.hacker_id asc
+
